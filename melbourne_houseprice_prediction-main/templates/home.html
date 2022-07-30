@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+
+</head>
+<body style="background-image: url('/static/house.jpeg')">
+<!-- <body style="background: white"> -->
+<h1><center>Melbourne House Price Prediction</center></h1>
+<h2><center>Map of Melbourne</center></h2>
+<div class="sidenav">
+  <link rel="stylesheet" href="/static/style.css">
+  <p><a href="{{ url_for('home') }}"method="post" action="http://127.0.0.1:5000/">Map</a></p>
+  <p><a href="{{ url_for('predict') }}"method="post" action="http://127.0.0.1:5000/predict">Prediction</a></p>
+  <p><a href="{{ url_for('input_data') }}"method="post" action="http://127.0.0.1:5000/input_data">Input Raw Data</a></p>
+  <p><a href="{{ url_for('visualization') }}"method="post" action="http://127.0.0.1:5000/visualization">Visualization</a></p>
+  <p><a href="{{ url_for('table') }}"method="post" action="http://127.0.0.1:5000/table">Table</a></p>
+</div>
+<center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d402589.81585837575!2d144.77295794697434!3d-37.97169289154851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20Victoria%2C%20Australia!5e0!3m2!1sid!2sid!4v1613806854445!5m2!1sid!2sid" width="900" height="675" style="border:0;" allowfullscreen="" ></iframe></center>
+</body>
+</html>

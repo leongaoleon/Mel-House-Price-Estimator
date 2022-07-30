@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>House Price Prediction</title>
+
+</head>
+<body style="background-image: url('/static/house.jpeg')">
+<!-- <body style="background: white"> -->
+<div class="login">
+    <h1><center>Melbourne House Price Prediction</center></h1>
+    <h2><center>Input raw data for our database</center></h2>
+</div>
+<div class="sidenav">
+<link rel="stylesheet" href="/static/style.css">
+    <p><a href="{{ url_for('home') }}"method="post" action="http://127.0.0.1:5000/">Map</a></p>
+    <p><a href="{{ url_for('predict') }}"method="post" action="http://127.0.0.1:5000/predict">Prediction</a></p>
+    <p><a href="{{ url_for('input_data') }}"method="post" action="http://127.0.0.1:5000/input_data">Input Raw Data</a></p>
+    <p><a href="{{ url_for('visualization') }}"method="post" action="http://127.0.0.1:5000/visualization">Visualization</a></p>
+    <p><a href="{{ url_for('table') }}"method="post" action="http://127.0.0.1:5000/table">Table</a></p>
+  </div>
+  <br><center>{{ text }}</center></br>
+
+
+
+
+     <!-- Main Input For Receiving Query to our ML -->
+
+  <form action="{{ url_for('input_data')}}"method="post">
+    <center><form action="{{ url_for('input_data')}}"method="post">
+    <br><input type="text" name="Suburb" placeholder="Name of Suburb" required="required" /></br>
+    <br><input type="text" name="Address" placeholder="Address" required="required" /></br>
+    <br><input type="text" name="Rooms" placeholder="Number of Rooms" required="required" /></br>
+    <br><input type="text" name="Type" placeholder="Type of building" required="required" /></br>
+    <br><input type="text" name="Price" placeholder="Price" required="required" /></br>
+    <br><input type="text" name="Method" placeholder="Method" required="required" /></br>
+    <br><input type="text" name="SellerG" placeholder="Seller" required="required" /></br>
+    <br><input type="text" name="Date" placeholder="Date" required="required" /></br>
+    <br><input type="text" name="Distance" placeholder="Distance from CBD" required="required" /></br>
+    <br><input type="text" name="Postcode" placeholder="Postcode" required="required" /></br>
+    <br><input type="text" name="Bedroom2" placeholder="Number of Bedroom" required="required" /></br>
+    <br><input type="text" name="Bathroom" placeholder="Number of Bathroom" required="required" /></br>
+    <br><input type="text" name="Car" placeholder="TNumber of Carspot" required="required" /></br>
+    <br><input type="text" name="Landsize" placeholder="Landsize in meter" required="required" /></br>
+    <br><input type="text" name="BuildingArea" placeholder="Building area in meter" required="required" /></br>
+    <br><input type="text" name="YearBuilt" placeholder="Year of Building is built" required="required" /></br>
+    <br><input type="text" name="CouncilArea" placeholder="Governing council for the area" required="required" /></br>
+    <br><input type="text" name="Lattitude" placeholder="Latitude" required="required" /></br>
+    <br><input type="text" name="Longtitude" placeholder="Longitude" required="required" /></br>
+    <br><input type="text" name="Regionname" placeholder="Name of Region" required="required" /></br>
+    <br><input type="text" name="Propertycount" placeholder="Count of property in the Suburb" required="required" /></br>
+    <br><button type="submit" class="btn btn-primary btn-block btn-large">Input New Data</button></br>
+    </form></center>
+ 
+  
+  <!-- <br><center>{{ prediction_text }}</center></br> -->
+  </form>>
+
+ 
+</body>
+</html>

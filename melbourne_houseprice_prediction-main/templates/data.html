@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+
+</head>
+<!-- <body style="background-image: url('/static/house.jpeg')"> -->
+<body style="background: white">
+<h1><center>Melbourne House Price Prediction</center></h1>
+<h2><center>Last 10 data input</center></h2>
+<div class="sidenav">
+  <link rel="stylesheet" href="/static/style.css">
+  <p><a href="{{ url_for('home') }}"method="post" action="http://127.0.0.1:5000/">Map</a></p>
+  <p><a href="{{ url_for('predict') }}"method="post" action="http://127.0.0.1:5000/predict">Prediction</a></p>
+  <p><a href="{{ url_for('input_data') }}"method="post" action="http://127.0.0.1:5000/input_data">Input Raw Data</a></p>
+  <p><a href="{{ url_for('visualization') }}"method="post" action="http://127.0.0.1:5000/visualization">Visualization</a></p>
+  <p><a href="{{ url_for('table') }}"method="post" action="http://127.0.0.1:5000/table">Table</a></p>
+  
+</div>
+<center>
+<style>
+ 
+    td {
+           width: 150px;
+           height: 20px;
+           text-align: center;
+           border: 1px solid black;
+           padding: 5px;
+         }
+   </style>
+   <table>
+     <thead>
+       <tr>
+           <th>suburb</th>
+           <th>Address</th>
+           <th>Rooms</th>
+           <th>Price</th>
+           <th>Distance</th>
+           <th>Landsize</th>
+           <th>Building Area</th>
+
+       </tr>
+       </thead>    
+       <tbody>
+        {% for row in data %}    
+               <tr>
+                   <td>{{row[1]}}</td>
+                   <td>{{row[2]}}</td>
+                   <td>{{row[3]}}</td>
+                   <td>{{row[5]}}</td>
+                   <td>{{row[9]}}</td>
+                   <td>{{row[14]}}</td>
+                   <td>{{row[15]}}</td>
+             
+               </tr>
+           {% endfor %}
+       </tbody>
+   </table>
+</center>>
+</br>
+</body>
+</html>

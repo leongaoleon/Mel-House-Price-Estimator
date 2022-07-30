@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>House Price Prediction</title>
+
+</head>
+<body style="background-image: url('/static/house.jpeg')">
+<!-- <body style="background: white"> -->
+<div class="login">
+	<h1><center>Melbourne House Price Prediction</center></h1>
+  <h2><center>Predict House Price</center></h2>
+</div>
+<div class="sidenav">
+<link rel="stylesheet" href="/static/style.css">
+  <p><a href="{{ url_for('home') }}"method="post" action="http://127.0.0.1:5000/">Map</a></p>
+  <p><a href="{{ url_for('predict') }}"method="post" action="http://127.0.0.1:5000/predict">Prediction</a></p>
+  <p><a href="{{ url_for('input_data') }}"method="post" action="http://127.0.0.1:5000/input_data">Input Raw Data</a></p>
+  <p><a href="{{ url_for('visualization') }}"method="post" action="http://127.0.0.1:5000/visualization">Visualization</a></p>
+  <p><a href="{{ url_for('table') }}"method="post" action="http://127.0.0.1:5000/table">Table</a></p>
+</div>
+  <br><center>{{ prediction_text }}</center></br>
+
+
+     <!-- Main Input For Receiving Query to our ML -->
+
+  <form action="{{ url_for('result')}}"method="post">
+    <center><form action="{{ url_for('result')}}"method="post">
+    	<br><input type="text" name="Suburb" placeholder="Name of Suburb" required="required" /></br>
+      <br><label>Number of Rooms</label>
+      <select name = "Rooms">
+        <option value = "1">1</option>
+        <option value = "2">2</option>
+        <option value = "3">3</option>
+        <option value = "4">4</option>
+        <option value = "5">5</option>
+        <option value = "6">6</option>
+        <option value = "7">7</option>
+      </select></br>
+      <br><label>Type of unit</label>
+      <select name = "Type">
+        <option value = "h">House</option>
+        <option value = "u">Unit/Duplex</option>
+        <option value = "t">Townhouse</option>
+      </select></br>
+      <br><label>Number of Bathrooms</label>
+      <select name = "Bathroom">
+        <option value = "1">1</option>
+        <option value = "2">2</option>
+        <option value = "3">3</option>
+        <option value = "4">4</option>
+        <option value = "5">5</option>
+        <option value = "6">6</option>
+
+      </select></br>
+      <br><label>Number of Carspots</label>
+      <select name = "Car">
+        <option value = "0">0</option>
+        <option value = "1">1</option>
+        <option value = "2">2</option>
+        <option value = "3">3</option>
+        <option value = "4">4</option>
+        <option value = "5">5</option>
+        <option value = "6">6</option>
+        <option value = "7">7</option>
+      </select></br>
+      <br><input type="text" name="Landsize" placeholder="Landsize in meter" required="required" /></br>
+      <br><input type="text" name="BuildingArea" placeholder="Building Area in meter" required="required" /></br>
+      <br><input type="text" name="age" placeholder="Age of Building" required="required" /></br>
+      <br><input type="text" name="month" placeholder="Month of buying " required="required" /></br>
+      <br><button type="submit" class="btn btn-primary btn-block btn-large">Predict house price</button></br>
+    </form></center>
+ 
+  
+  <!-- <br><center>{{ prediction_text }}</center></br> -->
+  </form>>
+
+</body>
+</html>

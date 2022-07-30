@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+
+</head>
+<!-- <body style="background-image: url('/static/house.jpeg')"> -->
+<body style="background: white">
+<h1><center>Melbourne House Price Prediction</center></h1>
+<h2><center>Data Visualization</center></h2>
+<div class="sidenav">
+  <link rel="stylesheet" href="/static/style.css">
+  <p><a href="{{ url_for('home') }}"method="post" action="http://127.0.0.1:5000/">Map</a></p>
+  <p><a href="{{ url_for('predict') }}"method="post" action="http://127.0.0.1:5000/predict">Prediction</a></p>
+  <p><a href="{{ url_for('input_data') }}"method="post" action="http://127.0.0.1:5000/input_data">Input Raw Data</a></p>
+  <p><a href="{{ url_for('visualization') }}"method="post" action="http://127.0.0.1:5000/visualization">Visualization</a></p>
+  <p><a href="{{ url_for('table') }}"method="post" action="http://127.0.0.1:5000/table">Table</a></p>
+  
+</div>
+
+<p class="image">
+<center><a href="/static/harga rumah 2016-2018.png"><img src="/static/harga rumah 2016-2018.png"/></a></center>
+<center><a href="/static/Feature importances.png"><img src="/static/Feature importances.png"/></a></center>
+<center><a href="/static/price vs buildingarea.png"><img src="/static/price vs buildingarea.png" width="600" height="450" style="border:0;"padding-bottom="50px"/></a></center>
+<center><a href="/static/price vs distance.png"><img src="/static/price vs distance.png" width="600" height="450" style="border:0;"padding-bottom="50px"/></a></center>
+<center><a href="/static/price dist.png"><img src="/static/price dist.png" width="300" height="400" style="border:0;"padding-bottom="50px"/></a></center>
+</p>
+
+
+</br>
+</body>
+</html>
